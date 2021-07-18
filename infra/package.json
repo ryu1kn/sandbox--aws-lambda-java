@@ -1,0 +1,12 @@
+{
+  "name": "infra",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "cdk": "cdk"
+  },
+  "dependencies": {
+    "aws-cdk": "^1.114.0"
+  }
+}
