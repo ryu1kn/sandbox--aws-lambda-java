@@ -3,4 +3,5 @@
 /infra/cdk.out
 /infra/node_modules
 /infra/target
+/app/.gradle
 *.iml
