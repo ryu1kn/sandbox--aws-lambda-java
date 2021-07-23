@@ -3,5 +3,6 @@
 /infra/cdk.out
 /infra/node_modules
 /infra/target
+/infra/lambda-output.txt
 /app/.gradle
 *.iml

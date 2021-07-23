@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.SerializationFeature
 import org.junit.Test
 import software.amazon.awscdk.core.App
+import kotlin.test.assertEquals
 
 class InfraTest {
     private val JSON = ObjectMapper().configure(SerializationFeature.INDENT_OUTPUT, true)
@@ -15,9 +16,8 @@ class InfraTest {
         val stack = InfraStack(app, "test")
 
         // synthesize the stack to a CloudFormation template
-        val actual: JsonNode = JSON.valueToTree(app.synth().getStackArtifact(stack.getArtifactId()).getTemplate());
+        val actual = JSON.valueToTree<JsonNode>(app.synth().getStackArtifact(stack.artifactId).template);
 
-        // Update once resources have been added to the stack
-        assert(actual.get("Resources") == null)
+        assertEquals(2, actual.get("Resources").size())
     }
 }
