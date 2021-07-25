@@ -12,7 +12,7 @@ class InfraStack(scope: Construct, id: String, props: StackProps?) : Stack(scope
 
     init {
         val packageInstructions = listOf("/bin/sh", "-c",
-            "./gradlew jar && cp build/libs/app.jar /asset-output/"
+            "./gradlew fatJar && cp build/libs/app-fat.jar /asset-output/"
         )
 
         val builderOptions = BundlingOptions.builder()
