@@ -18,6 +18,16 @@ class InfraStack(scope: Construct, id: String, props: StackProps?) : Stack(scope
         val builderOptions = BundlingOptions.builder()
             .command(packageInstructions)
             .image(Runtime.JAVA_11.bundlingImage)
+            .volumes(listOf(
+                DockerVolume.builder()
+                    .hostPath("${System.getProperty("user.home")}/.m2/")
+                    .containerPath("/root/.m2/")
+                    .build(),
+                DockerVolume.builder()
+                    .hostPath("${System.getProperty("user.home")}/.gradle/")
+                    .containerPath("/root/.gradle/")
+                    .build()
+            ))
             .user("root")
             .outputType(BundlingOutput.ARCHIVED)
             .build()
