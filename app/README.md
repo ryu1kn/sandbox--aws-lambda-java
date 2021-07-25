@@ -20,3 +20,7 @@ To invoke the function, run:
 ```sh
 make invoke
 ```
+
+## References
+
+* [Kotlin and Groovy JVM Languages with AWS Lambda](https://aws.amazon.com/blogs/compute/kotlin-and-groovy-jvm-languages-with-aws-lambda/)

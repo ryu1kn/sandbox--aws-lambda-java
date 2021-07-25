@@ -58,3 +58,4 @@ then check the output file in the "cdk.out" directory.
 ## References
 
 * [AWS Cloud Development Kit (AWS CDK) - Getting Started](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html)
+* [CDK Java Example](https://github.com/aws-samples/aws-cdk-examples/tree/aaffc895592d41981f1c2817d0a6c1912333ad52/java/lambda-cron)
