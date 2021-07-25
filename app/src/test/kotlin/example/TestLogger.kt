@@ -1,4 +1,4 @@
-package example;
+package example
 
 import com.amazonaws.services.lambda.runtime.LambdaLogger
 import org.slf4j.LoggerFactory

@@ -16,7 +16,7 @@ class InfraTest {
         val stack = InfraStack(app, "test")
 
         // synthesize the stack to a CloudFormation template
-        val actual = JSON.valueToTree<JsonNode>(app.synth().getStackArtifact(stack.artifactId).template);
+        val actual = JSON.valueToTree<JsonNode>(app.synth().getStackArtifact(stack.artifactId).template)
 
         assertEquals(2, actual.get("Resources").size())
     }
