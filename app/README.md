@@ -79,15 +79,9 @@ Choose a node in the main function graph. Then choose **View traces** to see a l
 
 # Configure Handler Class
 
-By default, the function uses a handler class named `Handler` that takes a map as input and returns a string. The project also includes handlers that use other input and output types. These are defined in the following files under src/main/java/example:
+By default, the function uses a handler class named `Handler` that takes a map as input and returns a string.
 
 - `Handler.java` – Takes a `Map<String,String>` as input.
-- `HandlerInteger.java` – Takes an `Integer` as input.
-- `HandlerList.java` – Takes a `List<Integer>` as input.
-- `HandlerDivide.java` – Takes a `List<Integer>` with two integers as input.
-- `HandlerStream.java` – Takes an `InputStream` and `OutputStream` as input.
-- `HandlerString.java` – Takes a `String` as input.
-- `HandlerWeatherData.java` – Takes a custom type as input.
 
 To use a different handler, change the value of the Handler setting in the application template (`template.yml` or `template-mvn.yaml`). For example, to use the list handler:
 
