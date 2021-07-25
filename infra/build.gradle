@@ -1,0 +1,31 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.21'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+def kotlin_version = '1.5.21'
+def cdk_version = '1.114.0'
+
+dependencies {
+    implementation "software.amazon.awscdk:core:${cdk_version}"
+    implementation "software.amazon.awscdk:lambda:${cdk_version}"
+    testImplementation "org.jetbrains.kotlin:kotlin-test:${kotlin_version}"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11
+    }
+}
+
+application {
+    mainClass = 'io.ryuichi.InfraAppKt'
+}

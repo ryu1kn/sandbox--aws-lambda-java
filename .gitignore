@@ -1,8 +1,9 @@
 /.idea
 /infra/.cdk.staging
+/infra/.gradle
 /infra/cdk.out
 /infra/node_modules
-/infra/target
+/infra/build
 /app/.gradle
 /app/build
 /app/lambda-output.txt

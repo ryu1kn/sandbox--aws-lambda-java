@@ -3,8 +3,8 @@ package io.ryuichi
 import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.SerializationFeature
-import org.junit.Test
 import software.amazon.awscdk.core.App
+import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class InfraTest {

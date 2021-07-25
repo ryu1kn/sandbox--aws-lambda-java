@@ -4,14 +4,10 @@ The contents is originally generated with `cdk init app --language java`
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
-It is a [Maven](https://maven.apache.org/) based project, so you can open this project
-with any Maven compatible Java IDE to build and run tests.
-
 ## Prerequisites
 
 * yarn (used to install aws-cdk in the current directory)
-* maven
-* JDK 8
+* JDK 11
 
 ## Build
 
@@ -49,7 +45,7 @@ then check the output file in the "cdk.out" directory.
 
 ## Other useful commands
 
-* `./gradlew jar`   compile and run tests
+* `./gradlew test`  Run tests
 * `cdk ls`          list all stacks in the app
 * `cdk deploy`      deploy this stack to your default AWS account/region
 * `cdk diff`        compare deployed stack with current state
