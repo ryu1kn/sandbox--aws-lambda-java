@@ -49,7 +49,7 @@ then check the output file in the "cdk.out" directory.
 
 ## Other useful commands
 
-* `mvn package`     compile and run tests
+* `./gradlew jar`   compile and run tests
 * `cdk ls`          list all stacks in the app
 * `cdk deploy`      deploy this stack to your default AWS account/region
 * `cdk diff`        compare deployed stack with current state
