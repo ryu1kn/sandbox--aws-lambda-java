@@ -6,7 +6,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: build/libs/app-fat.jar
-      Handler: example.Handler
+      Handler: io.ryuichi.Handler
       Runtime: java11
       Description: Java function
       MemorySize: 512

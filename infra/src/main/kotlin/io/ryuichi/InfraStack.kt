@@ -27,7 +27,7 @@ class InfraStack(scope: Construct, id: String, props: StackProps?) : Stack(scope
             .description("Lambda which prints \"I'm running\"")
             .code(Code.fromAsset("../app/", AssetOptions.builder().bundling(builderOptions).build()))
             .runtime(Runtime.JAVA_11)
-            .handler("example.Handler")
+            .handler("io.ryuichi.Handler")
             .memorySize(1024)
             .timeout(Duration.seconds(300))
             .build())
