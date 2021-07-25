@@ -34,4 +34,6 @@ tasks.register('fatJar', Jar) {
     from {
         configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
     }
+
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
 }
