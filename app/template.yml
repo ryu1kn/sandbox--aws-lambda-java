@@ -5,9 +5,9 @@ Resources:
   function:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: build/distributions/java-basic.zip
+      CodeUri: build/libs/app-fat.jar
       Handler: example.Handler
-      Runtime: java8
+      Runtime: java11
       Description: Java function
       MemorySize: 512
       Timeout: 10
