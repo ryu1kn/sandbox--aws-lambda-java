@@ -30,7 +30,6 @@ class InfraStack(scope: Construct, id: String, props: StackProps?) : Stack(scope
 
         Function(this, "cdk-lambda-cron", FunctionProps.builder()
             .functionName("cdk-lambda-cron")
-            .description("Lambda which prints \"I'm running\"")
             .code(Code.fromAsset("../app/", AssetOptions.builder().bundling(builderOptions).build()))
             .runtime(Runtime.JAVA_11)
             .handler("io.ryuichi.Handler")
