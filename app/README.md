@@ -8,10 +8,17 @@ The project source includes function code and supporting resources:
 
 * JDK 11
 * [The AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
+* [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
 
 ## Deploy & Undeploy
 
 Go to [`../infra`](../infra) directory and follow its instructions.
+
+## Locally run the lambda
+
+```sh
+make local-run
+```
 
 ## Test
 

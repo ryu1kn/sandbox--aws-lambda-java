@@ -5,3 +5,6 @@ invoke:
 		--payload file://event.json \
 		lambda-output.txt \
 		--region ap-southeast-2
+
+local-run:
+	sam local invoke MyFunction --event event.json

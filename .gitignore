@@ -4,6 +4,7 @@
 /infra/cdk.out
 /infra/node_modules
 /infra/build
+/app/.aws-sam
 /app/.gradle
 /app/build
 /app/lambda-output.txt
