@@ -29,7 +29,17 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     }
 }
 
-tasks.register('fatJar', Jar) {
+jar {
+    // https://docs.aws.amazon.com/en_us/lambda/latest/dg/java-package.html#java-package-gradle
+    from compileKotlin
+    from processResources
+
+    into('lib') {
+        from configurations.runtimeClasspath
+    }
+}
+
+task fatJar(type: Jar) {
     archiveClassifier = 'fat'
 
     from sourceSets.main.output
